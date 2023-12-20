@@ -1,0 +1,41 @@
+Gitignore
+
+1) What?
+  Tệp .gitignore là một tệp cấu hình trong hệ thống kiểm soát phiên bản Git được sử dụng để chỉ định các tệp và thư mục mà Git nên bỏ qua (không theo dõi) khi thực hiện các lệnh commit, add, và status. Mục đích chính là loại bỏ những tệp và thư mục không cần thiết khỏi quá trình theo dõi và lưu trữ trong kho lưu trữ Git.
+2) When?
+  Ưu điểm:
+   - Loại bỏ những tệp/thư mục không quan trọng
+   - Giảm dung lượng kho lưu trữ
+   - Tăng tốc quá trình commit
+   - Giảm sự rối trong quá trình theo dõi thay đổi
+  Khi nên sử dụng	
+   - Khi có các tệp và thư mục không cần theo dõi
+   - Khi muốn giữ kho lưu trữ sạch sẽ và tập trung vào mã nguồn chính
+  Các tình huống thích hợp	
+   - Tệp và thư mục tạm thời, log, dữ liệu cấu hình và bảo mật
+   - Thư mục và tệp máy chủ cục bộ
+   - Các tệp tạo ra tự động bởi công cụ và máy chủ phát triển
+   - Các tệp và thư mục cụ thể cho từng dự án hoặc môi trường cụ thể
+3) Where?
+ Thư mục Gốc Dự Án	
+   - Giữ tệp .gitignore tại thư mục gốc để định nghĩa những gì không nên theo dõi bởi Git trong dự án.
+ Kho Lưu Trữ	
+   - Bạn có thể chứa tệp .gitignore trong kho lưu trữ để đảm bảo sự đồng bộ hóa và cung cấp cùng một cấu hình cho mọi người trong dự án.
+4) How?
+  Bước	
+   1	Tạo hoặc chỉnh sửa tệp .gitignore trong thư mục gốc của dự án.
+   2	Thêm các quy tắc vào tệp .gitignore để chỉ định các tệp và thư mục không nên theo dõi bởi Git.
+   3	Lưu và đóng tệp .gitignore.
+   4	(Tùy chọn) Thêm và commit tệp .gitignore vào kho lưu trữ của dự án để đảm bảo mọi người đều có cùng một cấu hình .gitignore.
+ Ví dụ: 
+# Bỏ qua các file cơ sở dữ liệu SQLite
+*.sqlite
+
+# Bỏ qua thư mục logs
+/logs/
+
+# Bỏ qua file tạm thời
+*.temp
+
+# Bỏ qua thư mục và file được tạo bởi IDE Visual Studio Code
+.vscode/
